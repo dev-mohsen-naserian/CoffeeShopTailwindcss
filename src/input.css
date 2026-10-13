@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base{
+    @font-face{
+        font-family:"Dana";/*400*/
+        src:local("Dana"), url("../src/public/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face{
+        font-family:"Dana Medium";/*500*/
+        src:local("Dana"), url("../src/public/fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face{
+        font-family:"Dana DemiBold";/*600*/
+        src:local("Dana"), url("../src/public/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+        font-display: swap;
+    }
+       @font-face{
+        font-family:"Morabba Light";
+        src:local("Dana"), url("../src/public/fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
+        font-display: swap;
+    }
+       @font-face{
+        font-family:"Morabba Medium";
+        src:local("Dana"), url("../src/public/fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+        font-display: swap;
+    }
+       @font-face{
+        font-family:"Morabba Bold";
+        src:local("Dana"), url("../src/public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+        font-display: swap;
+    }
+    body{
+        @apply font-Dana;
+    }
+}
+
+@theme{
+    --colo-brown-100:#ECE001;
+    --colo-brown-300:#DBC1AC;
+    --colo-brown-600:#967259;
+    --colo-brown-900:#634832;
+
+    --shadow-normal:0px 1px 10px rgba(0,0,0,0.5);
+
+    --redius-4xl:2rem;
+
+    --font-Dana:"Dana";
+    --font-DanaMedium:"Dana Medium";
+    --font-DanaDemiBold:"Dana DemiBold";
+    --font-MorabbaLight:"Morabba Light";
+    --font-MorabbaMedium:"Morabba Medium";
+    --font-MorabbaBold:"Morabba Bold";
+
+    --tracking-tightest:-0.065em;
+
+    --breakpoint-xs:480px;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility container{
+    @apply mx-auto px-4 lg:px-2.5;
+}
+
+@layer utilities{
+    .bg-home-mobile{
+        background-image: url('../images/headerBgMobile.webp');
+    }
+    .bg-home-desktop{
+        background-image:url('../images/headerBgDesktop.webp');
+    }
+}
